@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 257949696 bytes for Failed to commit area from 0x000000070a000000 to 0x0000000719600000 of length 257949696.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3386), pid=32908, tid=33468
+#
+# JRE version:  (11.0.16+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.16+8, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=utf8 c:\Users\AISPL-07\.vscode\extensions\vscjava.vscode-gradle-3.12.6\lib\gradle-language-server.jar
+
+Host: AMD Ryzen 5 PRO 4650G with Radeon Graphics, 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.755)
+Time: Sat Dec 17 16:42:25 2022 India Standard Time elapsed time: 0.015426 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000021fad16b800):  JavaThread "Unknown thread" [_thread_in_vm, id=33468, stack(0x000000b858800000,0x000000b858900000)]
+
+Stack: [0x000000b858800000,0x000000b858900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61a63a]
+V  [jvm.dll+0x757439]
+V  [jvm.dll+0x758b28]
+V  [jvm.dll+0x759203]
+V  [jvm.dll+0x24d9a8]
+V  [jvm.dll+0x61794a]
+V  [jvm.dll+0x60c0f5]
+V  [jvm.dll+0x304f5c]
+V  [jvm.dll+0x304de2]
+V  [jvm.dll+0x309af6]
+V  [jvm.dll+0x34fe4f]
+V  [jvm.dll+0x34f880]
+V  [jvm.dll+0x2e1fd8]
+V  [jvm.dll+0x2e3136]
+V  [jvm.dll+0x731417]
+V  [jvm.dll+0x732b9f]
+V  [jvm.dll+0x35cb99]
+V  [jvm.dll+0x7142b0]
+V  [jvm.dll+0x3ca5ef]
+V  [jvm.dll+0x3cc7a1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1244d]
+C  [ntdll.dll+0x5dfb8]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000021faae95230, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000021fad17e800 GCTaskThread "GC Thread#0" [stack: 0x000000b858900000,0x000000b858a00000] [id=29040]
+  0x0000021fad1d9800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000b858a00000,0x000000b858b00000] [id=32872]
+  0x0000021fad1db800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000b858b00000,0x000000b858c00000] [id=34084]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbb08d17a7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000021fad169100] Heap_lock - owner thread: 0x0000021fad16b800
+
+Heap address: 0x000000070a000000, size: 3936 MB, Compressed Oops mode: Non-zero based: 0x000000070a000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.011 Loaded shared library C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff75bd20000 - 0x00007ff75bd2d000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\java.exe
+0x00007ffc39810000 - 0x00007ffc39a24000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc37c20000 - 0x00007ffc37ce2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc36ed0000 - 0x00007ffc3726d000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc372f0000 - 0x00007ffc37401000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc1f080000 - 0x00007ffc1f097000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\jli.dll
+0x00007ffc1fc90000 - 0x00007ffc1fca5000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\VCRUNTIME140.dll
+0x00007ffc38000000 - 0x00007ffc381aa000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc1d850000 - 0x00007ffc1dade000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007ffc37410000 - 0x00007ffc37436000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc37b70000 - 0x00007ffc37c17000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc37920000 - 0x00007ffc37949000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc36db0000 - 0x00007ffc36ec2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc37570000 - 0x00007ffc3760a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc37b30000 - 0x00007ffc37b62000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffbf2f40000 - 0x00007ffbf2fdb000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\msvcp140.dll
+0x00007ffbb05e0000 - 0x00007ffbb10ee000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\server\jvm.dll
+0x00007ffc37730000 - 0x00007ffc377de000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc381b0000 - 0x00007ffc38254000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc37a10000 - 0x00007ffc37b25000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc37910000 - 0x00007ffc37918000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc2c640000 - 0x00007ffc2c674000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc2f360000 - 0x00007ffc2f36a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc33f50000 - 0x00007ffc33f59000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc38440000 - 0x00007ffc384b1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc35cb0000 - 0x00007ffc35cc8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc33f00000 - 0x00007ffc33f10000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\verify.dll
+0x00007ffc2fec0000 - 0x00007ffc300ee000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc38d00000 - 0x00007ffc3908a000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc37eb0000 - 0x00007ffc37f87000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffc2a5a0000 - 0x00007ffc2a5d2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc37270000 - 0x00007ffc372eb000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc1e890000 - 0x00007ffc1e8b8000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\java.dll
+0x00007ffc28e90000 - 0x00007ffc28e9a000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\jimage.dll
+0x00007ffc1de30000 - 0x00007ffc1de48000 	C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d;C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=utf8 
+java_command: c:\Users\AISPL-07\.vscode\extensions\vscjava.vscode-gradle-3.12.6\lib\gradle-language-server.jar
+java_class_path (initial): c:\Users\AISPL-07\.vscode\extensions\vscjava.vscode-gradle-3.12.6\lib\gradle-language-server.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 257949696                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4127195136                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\OpenJDK\openjdk-11.0.16_8
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenJDK\openjdk-11.0.16_8\bin;C:\Program Files\Git\cmd;C:\Users\AISPL-07\AppData\Local\Android\Sdk\platform-tools;C:\Users\AISPL-07\AppData\Local\Android\Sdk\tools;C:\Users\AISPL-07\AppData\Local\Microsoft\WindowsApps;C:\Users\AISPL-07\AppData\Roaming\npm;C:\Users\AISPL-07\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\AISPL-07\AppData\Local\Android\Sdk;
+USERNAME=AISPL-07
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
+TMP=C:\Users\AISPL-07\AppData\Local\Temp
+TEMP=C:\Users\AISPL-07\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.755)
+OS uptime: 3 days 7:02 hours
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 96 stepping 1 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 15742M (330M free)
+TotalPageFile size 30238M (AvailPageFile size 114M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 64M, peak: 310M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.16+8) for windows-amd64 JRE (11.0.16+8), built on Jul 17 2022 01:33:05 by "tester" with MS VC++ 15.9 (VS2017)
+
+END.
